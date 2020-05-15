@@ -101,19 +101,20 @@ def calculateModelParameters(username):
 
     # Put parameters into dictionary
     model_parameters = {
-        "words_per_comment": words_per_comment,
-        "squared_total_words": squared_total_words,
-        "word_count_variance_per_comment": word_count_variance_per_comment,
-        "interrobangs_per_comment": interrobangs_per_comment,
-        "noun_count": noun_count,
-        "adjective_count": adjective_count,
-        "verb_count": verb_count,
-        "determiner_count": determiner_count,
-        "interjection_count": interjection_count,
-        "preposition_count": preposition_count,
-        "sentiment_score": sentiment_score
+        "words_per_comment": float(words_per_comment),
+        "squared_total_words": float(squared_total_words),
+        "word_count_variance_per_comment": float(word_count_variance_per_comment),
+        "interrobangs_per_comment": float(interrobangs_per_comment),
+        "noun_count": float(noun_count),
+        "adjective_count": float(adjective_count),
+        "verb_count": float(verb_count),
+        "determiner_count": float(determiner_count),
+        "interjection_count": float(interjection_count),
+        "preposition_count": float(preposition_count),
+        "sentiment_score": float(sentiment_score)
     }
 
+    #print(model_parameters)
     return model_parameters
 
 def tokenizePosts(username):
